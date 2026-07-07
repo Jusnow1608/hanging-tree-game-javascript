@@ -1,4 +1,3 @@
-Markdown
 # 🎮 Modern Hangman Game (Szubienica)
 
 👉 [Live Demo](https://jusnow1608.github.io/hanging-tree-game-javascript/)
@@ -27,8 +26,11 @@ A modern, responsive, and elegant web-based Hangman game built with clean **Java
 ![Game in Progress](game-progress.jpg)
 
 ### Game Over States
+
+### Victory
 ![Victory Screen](win.jpg) 
 
+### Game Over
 ![Game Over Screen](lose.jpg)
 
 ---
@@ -89,6 +91,7 @@ Incorrect guess: The letter turns red, plays a failure sound, and advances the g
 You have a maximum of 9 incorrect guesses before the game is lost.
 
 Click "ZAGRAJ PONOWNIE" (Play Again) to wipe the board, draw a fresh password, and start a new round instantly!
+
 ---
 
 ## 📜 License
