@@ -1,0 +1,48 @@
+:root{
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+}
+
+
+*, *::before, *::after{
+  padding: 0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+body{
+  background-color: var(--black);
+  font-family: "Inconsolata", monospace;
+  color: var(--white);
+  font-size: 40px;
+
+}
+
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1800px;
+  padding:clamp(1.5rem, 5vw, 3rem);
+}
+
+.board{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding:clamp(1.5rem, 5vw, 3rem);
+
+}
+
+.hanging-tree{
+width: 900px;
+}
+
+.alphabet{
+width: 900px;
+}
+
+
