@@ -24,7 +24,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1600px;
+  max-width: 100rem;
   width: 100%;
   padding:clamp(1.5rem, 5vw, 3rem);
   margin-inline: auto;
@@ -68,7 +68,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;  
-    border: 0.1rem solid var(--white);
     font-size: clamp(1.5rem, 2vw, 2rem);
     border-radius: 1rem;
     cursor: pointer;
@@ -79,12 +78,12 @@ body{
  .letter:hover{
   background-color: transparent;
   border-color: var(--white);
-  transform: translateY(-2px); /* delikatne uniesienie */
-  box-shadow: 0 0 15px var(--light-grey);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0 0.9375rem var(--light-grey);
  }
 
  .letter:active {
-  transform: translateY(1px);
+  transform: translateY(0.0625rem);
 }
 
 .btn-reset{
@@ -103,6 +102,19 @@ body{
   background-color: var(--white);
   color: var(--black);
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--light-grey);
+  box-shadow: 0 0 0.9375rem var(--light-grey);
 }
 
+.letter.correct {
+  background-color: #003300;
+  border-color: #00C000;
+  color: #00C000;
+  pointer-events: none; 
+}
+
+.letter.wrong {
+  background-color: #330000;
+  border-color: #C00000;
+  color: #C00000;
+  pointer-events: none;
+}
