@@ -27,10 +27,10 @@ A modern, responsive, and elegant web-based Hangman game built with clean **Java
 
 ### Game Over States
 
-### Victory
+#### Victory
 ![Victory Screen](win.jpg) 
 
-### Game Over
+#### Game Over
 ![Game Over Screen](lose.jpg)
 
 ---
