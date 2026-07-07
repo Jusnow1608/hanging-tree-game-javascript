@@ -4,7 +4,10 @@ let failCount = 0;
 const passwordArray = Array.from(targetPassword);
 const yesSound = new Audio("yes.wav");
 const noSound = new Audio("no.wav");
+
 let imageContainer = document.querySelector('.hanging-tree');
+
+let gameContainer = document.querySelector('.game-container');
 
 let hiddenPassword = passwordArray.map(char => char === " " ? " " : "-")
   .join("");
@@ -42,6 +45,10 @@ function checkLetter(letter, button){
     button.style.borderColor = "#00C000";
     button.style.color = "#00C000";
     button.style.pointerEvents = "none";
+    
+    if (!hiddenPassword.includes("-")) { 
+      endGame(true); 
+    }
   }
 
   else {
@@ -52,9 +59,40 @@ function checkLetter(letter, button){
     button.style.borderColor = "#C00000";
     button.style.color = "#C00000";
     button.style.pointerEvents = "none";
+   
+    if (failCount>=9){
+      endGame(false);
+    }
   }
+  displayPassword();
+}
 
-displayPassword();
+function endGame(isWin){
+  alphabetContainer.style.pointerEvents = "none";
+  
+  if (isWin===true){
+    passwordContainer.textContent = "GRATULACJE! WYGRAŁEŚ!";
+    } 
+  else {
+    passwordContainer.textContent = "PRZEGRANA! PRAWIDŁOWE HASŁO TO: " + targetPassword;
+    }
+    
+  const newGameButton = document.createElement('button');
+  newGameButton.textContent = "ZAGRAJ PONOWNIE";
+  newGameButton.classList.add('btn-reset');
+  gameContainer.appendChild(newGameButton);
+
+  newGameButton.addEventListener('click', () => {
+      gameContainer.removeChild(newGameButton);
+      failCount = 0;
+      imageContainer.src = `./img/s${failCount}.jpg`;
+      alphabetContainer.style.pointerEvents = "auto";
+      hiddenPassword = passwordArray.map(char => char === " " ? " " : "-").join("");
+      displayPassword();
+      alphabetContainer.innerHTML = "";
+      createKeyboard();
+      });
+
 }
 
 createKeyboard();
