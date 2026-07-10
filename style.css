@@ -28,6 +28,9 @@ body{
   width: 100%;
   padding:clamp(1.5rem, 5vw, 3rem);
   margin-inline: auto;
+  min-height: 100dvh;
+  padding-block-start: 4rem;
+  gap: 2rem;
 }
 
 .password{
@@ -117,4 +120,32 @@ body{
   border-color: #C00000;
   color: #C00000;
   pointer-events: none;
+}
+
+@media (max-width:48rem){
+
+ .game-container {
+    padding-block-start: 3rem;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+ 
+  .board{
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin-block-start: 1rem;
+  }
+
+.hanging-tree {
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+  }
+
+  .alphabet {
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    max-width: 22rem;
+  }
 }
