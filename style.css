@@ -29,8 +29,8 @@ body{
   padding:clamp(1.5rem, 5vw, 3rem);
   margin-inline: auto;
   min-height: 100dvh;
-  padding-block-start: 4rem;
-  gap: 2rem;
+  padding-block-start: clamp(2.5rem, 8vw, 5rem);
+  gap: clamp(1rem, 3vh, 2.5rem);
 }
 
 .password{
@@ -47,8 +47,8 @@ body{
   justify-content: center;
   align-items: center; 
   width: 100%;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding:clamp(1.5rem, 5vw, 3rem);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(0.5rem, 2vw, 2rem);
   flex-wrap: wrap;
 
 }
@@ -124,28 +124,20 @@ body{
 
 @media (max-width:48rem){
 
- .game-container {
-    padding-block-start: 3rem;
-    justify-content: center;
-    gap: 1.5rem;
-  }
- 
   .board{
     flex-direction: column;
-    gap: 1.5rem;
     width: 100%;
-    margin-block-start: 1rem;
   }
 
 .hanging-tree {
     width: 100%;
-    max-width: 22rem;
+    max-width: clamp(18rem, 85vw, 22rem);
     height: auto;
   }
 
   .alphabet {
     grid-template-columns: repeat(7, 1fr);
     width: 100%;
-    max-width: 22rem;
+    max-width: clamp(18rem, 85vw, 22rem);
   }
 }
