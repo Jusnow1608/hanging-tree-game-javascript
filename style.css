@@ -1,8 +1,18 @@
-:root{
+:root {
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
-  --dark-grey:  rgba(255, 255, 255, 0.2);
-  --light-grey: rgba(255, 255, 255, 0.4);
+  --dark-grey: hsla(0, 0%, 100%, 0.2);  /* rgba na hsla */
+  --light-grey: hsla(0, 0%, 100%, 0.4); /* rgba na hsla */
+  
+ 
+  --correct-bg: hsl(120, 100%, 10%);     
+  --correct-border: hsl(120, 100%, 38%); 
+  --correct-color: hsl(120, 100%, 38%); 
+
+
+  --wrong-bg: hsl(0, 100%, 10%);       
+  --wrong-border: hsl(0, 100%, 38%);   
+  --wrong-color: hsl(0, 100%, 38%);    
 }
 
 
@@ -136,16 +146,16 @@ body{
 }
 
 .letter.correct {
-  background-color: #003300;
-  border-color: #00C000;
-  color: #00C000;
+  background-color: var(--correct-bg);
+  border-color: var(--correct-border);
+  color: var(--correct-color);
   pointer-events: none; 
 }
 
 .letter.wrong {
-  background-color: #330000;
-  border-color: #C00000;
-  color: #C00000;
+  background-color: var(--wrong-bg);
+  border-color: var(--wrong-border);
+  color: var(--wrong-color);
   pointer-events: none;
 }
 
