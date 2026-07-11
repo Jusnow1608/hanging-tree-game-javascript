@@ -17,46 +17,47 @@ body{
   font-family: "Inconsolata", monospace;
   color: var(--white);
   font-size: 1rem;
+  overflow: hidden;
 }
 
 .game-container{
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 100rem;
   width: 100%;
-  padding:clamp(1.5rem, 5vw, 3rem);
+  padding:clamp(0.3rem, 3vw, 1.5rem);
   margin-inline: auto;
   min-height: 100dvh;
-  padding-block-start: clamp(2.5rem, 8vw, 5rem);
-  gap: clamp(1rem, 3vh, 2.5rem);
+  padding-block-start: clamp(0.5rem, 3vw, 2rem);
+  gap: clamp(0.2rem, 2vh, 1.2rem);
 }
 
 .game-title {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  margin-block-end: clamp(0.2rem, 1vw, 0.5rem);
+  margin-block-end: 0;
   text-align: center;
 }
 
 .category-display {
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
   color: var(--light-grey);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  margin-block-end: clamp(1rem, 4vh, 2rem);
+  margin-block-end: 0;
   text-align: center;
 }
 
 .password{
   text-transform: uppercase;
-  letter-spacing: clamp(0.5rem, 2vw, 1.5rem);
-  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: clamp(0.15rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.1rem, 3.5vw, 3.5rem);
   font-weight: 900;
-  margin-block-end: clamp(2rem, 5vh, 4rem);
+  margin-block-end: 0;
   text-align: center;
   word-break: break-word;
   max-width: 100%;
@@ -67,8 +68,8 @@ body{
   justify-content: center;
   align-items: center; 
   width: 100%;
-  gap: clamp(1.5rem, 5vw, 4rem);
-  padding: clamp(0.5rem, 2vw, 2rem);
+  gap: clamp(0.75rem, 4vw, 4rem);
+  padding: 0;
   flex-wrap: wrap;
 
 }
@@ -76,14 +77,18 @@ body{
 .hanging-tree{
   flex: 1;
   max-width: 100%;
-  height: auto;
+  height: clamp(18vh, 25vh, 45vh);
+  object-fit: contain;
 }
 
 .alphabet{
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(2.5rem, 5vw, 4rem), 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(2.6rem, 4.5vw, 4rem), 1fr));
+  gap: clamp(0.35rem, 1vw, 0.6rem);
+  width: 100%;
+  max-width: 36rem;
+  align-content: center;
 }
 
 .letter{
@@ -91,8 +96,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;  
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    border-radius: 1rem;
+    font-size: clamp(1.3rem, 2.2vw, 3rem);
+    border-radius: clamp(0.8rem, 1vw, 3rem);
     cursor: pointer;
     border: 0.125rem solid var(--dark-grey);
     transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
@@ -110,8 +115,8 @@ body{
 }
 
 .btn-reset{
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1.25rem, 4vw, 2rem);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 700;
   text-transform: uppercase;
   background: transparent;
@@ -119,7 +124,7 @@ body{
   color: var(--white);
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-block-start: clamp(1.5rem, 4vh, 2.5rem);
+  margin-block-start: clamp(0.5rem, 3vh, 2.5rem);
 }
 
 .btn-reset:hover{
@@ -147,18 +152,15 @@ body{
 
   .board{
     flex-direction: column;
-    width: 100%;
   }
 
 .hanging-tree {
-    width: 100%;
-    max-width: clamp(18rem, 85vw, 22rem);
-    height: auto;
+    height: 20vh; 
   }
 
   .alphabet {
     grid-template-columns: repeat(7, 1fr);
-    width: 100%;
-    max-width: clamp(18rem, 85vw, 22rem);
+    max-width: 28rem;
   }
+
 }
