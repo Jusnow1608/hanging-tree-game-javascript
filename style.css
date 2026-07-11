@@ -32,6 +32,7 @@ body{
   min-height: 100dvh;
   padding-block-end: clamp(1rem, 3vw, 2rem);
   gap: clamp(0.2rem, 2vh, 1.2rem);
+  overflow: hidden;
 }
 
 .game-title {
@@ -152,6 +153,7 @@ body{
 
   .board{
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 
 .hanging-tree {
